@@ -1,71 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JoLe515-Homepage</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f0f0;
-      color: #333;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoLe Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="pfp.jpg">
+    <style>
+        body {
+            background-color: #181818;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            
+        }
 
-    .container {
-      max-width: 600px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+        header {
+            background-color: #181818;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
 
-    p {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
 
-    a, button {
-      display: block;
-      width: 200px;
-      margin: 0 auto 10px; /* Added margin-bottom */
-      text-align: center;
-      padding: 10px;
-      background-color: #007bff;
-      color: #fff;
-      text-decoration: none;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
+        .container {
+            padding: 50px;
+            text-align: center;
+        }
 
-    a:hover, button:hover {
-      background-color: #0056b3;
-    }
-  </style>
+        h1, h2 {
+            margin: 0;
+        }
+
+        .hexagon {
+            width: 300px;
+            height: 300px;
+            background-color: #29abe2;
+            position: relative;
+            margin: 50px auto;
+            overflow: hidden;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            box-shadow: 0 0 10px #29abe2;
+            transition: box-shadow 0.5s;
+            border-radius: 15%;
+            border: none;
+            cursor: none;
+        }
+
+        .hexagon:hover {
+            box-shadow: 0 0 20px #29abe2;
+        }
+
+        .hexagon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            box-shadow: 0 0 10px #29abe2;
+            transition: all 0.3s ease-in-out;
+            transition: box-shadow 0.5s;
+            border: none;
+        }
+
+        .hexagon:hover img {
+            box-shadow: 0 0 20px #29abe2;
+            filter: saturate(1.0);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .social-links {
+            display: absolute;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin-top: 0.5rem;
+            width: 30px;
+            height: 30px;
+            background-color: #29abe2;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 18px;
+            box-shadow: 0 0 10px #29abe2;
+            transition: box-shadow 0.5s;
+        }
+
+        .social-links a:hover {
+            box-shadow: 0 0 20px #00b3ff;
+            background-color: #00b3ff;
+        }
+
+        button {
+            background-color: #29abe2;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            box-shadow: 0 0 10px #29abe2;
+            transition: box-shadow 0.5s;
+            font-weight: bolder;
+            font-size: large;
+        }
+
+        button:hover {
+            box-shadow: 0 0 20px #29abe2;
+        }
+
+        .socials {
+            position: fixed;
+            bottom: 1rem;
+            left: 1rem;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        div > h1{
+            color: rgb(0, 159, 187);
+        }
+        .fab > img{
+            width: 20px;
+            height: 20px;
+        }
+
+        .fab {
+            display: flex;
+            text-align:center;
+            align-items: center;
+        }
+
+        footer{
+            display: fixed !important;
+            bottom: 0px;
+            flex-direction: column;
+            height: auto !important;
+            min-height: 100%;
+            height: 100%;
+            margin: 0 0 0 0;
+        }
+
+        h3 {
+            display: fixed !important;
+            height: 100%;
+            min-height: max-content;
+            bottom: 0px;
+        }
+    </style>
 </head>
+<body ondragstart="return false;" ondrop="return false;">
+    <header>
+        <h1>JoLe</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="secret.html">Secret</a>
+            <!-- <a href="./impressum.html">Impressum</a> -->
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Hallo, wir sinds</h2>
+        <h1>Jonas & Levy</h1>
+        <h2>Wir wollen einfach Spaß haben</h2>
+        <p><3</p>
+        <div class="hexagon">
+            <img src="pfp.jpg" alt="Profile Picture">
+        </div>
+        <div class="socials">
+            <div class="social-links">
+                <a href="https://discord.gg/EdzzpWjUba"><i class="fab fa-discord-f"><image src="dc.ico"></image></i></a>
+                <a href="https://tiktok.com/jole515x"><i class="fab fa-tiktok"><image src="tt.ico"></image></i></a>
+                <a href="https://www.twitch.tv/jolex515"><i class="fab fa-twitch-in"><image src="ttv.ico"></image></i></a>
+            </div>
+        </div>
+        <button onclick="window.open('https://youtube.com/@jole515?sub_confirmation=1','_blank');">Abonnieren</button>
+        <footer>
+            <h3>Made with ❤️ by <a href="https://github.com/blausteinstaub">Bengt</a></h3>
+        </footer>
+    </div>
 
-<body>
-  <div class="container">
-    <h1>Links</h1>
-    <p>Visit our links</p>
-    <p>We hope you enjoy it.</p>
-    <p>JoLe515</p>
-    
-    <!-- Buttons for additional links -->
-    <a href="mediatree/yt/" target="_blank"><button>YouTube</button></a>
-    <a href="mediatree/dc/" target="_blank"><button>Discord</button></a>
-    <a href="mediatree/twitch/" target="_blank"><button>Twitch</button></a>
-  </div>
 </body>
 
 </html>
